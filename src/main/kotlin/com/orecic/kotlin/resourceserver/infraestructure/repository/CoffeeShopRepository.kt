@@ -1,4 +1,4 @@
-package com.orecic.kotlin.resourceserver.infraestructure
+package com.orecic.kotlin.resourceserver.infraestructure.repository
 
 import com.orecic.kotlin.resourceserver.domain.entity.CoffeeShopEntity
 import org.springframework.data.repository.CrudRepository

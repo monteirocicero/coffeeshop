@@ -1,4 +1,4 @@
-package com.orecic.kotlin.resourceserver.infraestructure
+package com.orecic.kotlin.resourceserver.infraestructure.configuration
 
 import com.orecic.kotlin.resourceserver.domain.entity.CoffeeShopEntity
 import org.springframework.context.annotation.Configuration

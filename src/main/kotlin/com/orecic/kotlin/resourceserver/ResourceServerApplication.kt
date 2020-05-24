@@ -1,7 +1,7 @@
 package com.orecic.kotlin.resourceserver
 
 import com.orecic.kotlin.resourceserver.domain.entity.CoffeeShopEntity
-import com.orecic.kotlin.resourceserver.infraestructure.CoffeeShopRepository
+import com.orecic.kotlin.resourceserver.infraestructure.repository.CoffeeShopRepository
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
