@@ -9,11 +9,19 @@ class Home extends React.Component {
       <div className="app">
         {this.props.navbar}
         <Container fluid>
+        { this.props.authenticated ?
           <div>
             <Button color="secondary">
               <Link className="app-link" to="/coffee-shops">Manage Coffee Shops</Link>
             </Button>
-          </div>
+          </div> :
+           <div>
+          <p>Please log in to manage coffee shops.</p>
+            <Button color="secondary" disabled={true}>
+               Manage Coffee Shops
+            </Button>
+           </div>
+        }
         </Container>
       </div>
     );

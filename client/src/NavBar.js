@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Button, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
@@ -16,6 +16,7 @@ class NavBar extends React.Component {
   }
 
   render() {
+    const {isAuthenticated, login, logout} = this.props;
     return <Navbar color="light" light expand="md">
       <NavbarBrand tag={Link} to="/">Home</NavbarBrand>
       <NavbarToggler onClick={this.toggle}/>
@@ -28,6 +29,14 @@ class NavBar extends React.Component {
           <NavItem>
             <NavLink href="https://github.com/monteirocicero/coffeeshop">GitHub</NavLink>
           </NavItem>
+          { !isAuthenticated ?
+            <NavItem>
+              <Button color="secondary" outline onClick={login}>Login</Button>
+            </NavItem> :
+            <NavItem>
+              <Button color="secondary" outline onClick={logout}>Logout</Button>
+            </NavItem>
+          }
         </Nav>
       </Collapse>
     </Navbar>;
